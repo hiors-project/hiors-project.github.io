@@ -2,10 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Anybimanual">
-  <meta name="keywords" content="Multi-task Robotic Bimanual Manipulation, Plug-and-play, Skill Learning">
+  <meta name="description" content="Human-in-the-loop Online Rejection Sampling for Robotic Manipulation">
+  <meta name="keywords" content="Robotic Manipulation, Human-in-the-loop, Rejection Sampling, Online Learning">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AnyBimanual: Transferring Unimanual Policy for General Bimanual Manipulation</title>
+  <title>Human-in-the-loop Online Rejection Sampling for Robotic Manipulation</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -29,24 +29,24 @@
   <!-- <link rel="icon" href="./favicon.ico"> -->
   <link rel="icon" href="/favicon.ico?version=2" type="image/x-icon">
 
-  <meta property="og:site_name" content="Anybimanual" />
+  <meta property="og:site_name" content="HiORS" />
   <meta property="og:type" content="video.other" />
-  <meta property="og:title" content="Anybimanual" />
-  <meta property="og:description" content="by Guanxing Lu, Tengbo Yu, Haoyuan Deng, Season Si Chen, Yansong Tang, Ziwei Wang" />
-  <meta property="og:url" content="https://anybimanual.github.io/" />
-  <meta property="og:image" content="https://anybimanual.github.io/static/images/fong.png" />
-  <meta property="og:image:secure" content="https://anybimanual.github.io/static/images/fong.png" />
+  <meta property="og:title" content="Human-in-the-loop Online Rejection Sampling for Robotic Manipulation" />
+  <meta property="og:description" content="by Guanxing Lu, Rui Zhao, Haitao Lin, He Zhang, Yansong Tang" />
+  <meta property="og:url" content="https://hiors-project.github.io/" />
+  <meta property="og:image" content="https://hiors-project.github.io/static/images/fong.png" />
+  <meta property="og:image:secure" content="https://hiors-project.github.io/static/images/fong.png" />
   <meta property="og:video" content=" " />
   <meta property="og:video:secure" content=" " />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="720" />
 
-  <meta property="article:publisher" content="https://anybimanual.github.io" />
+  <meta property="article:publisher" content="https://hiors-project.github.io" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Anybimanual" />
-  <meta name="twitter:description" content="by Guanxing Lu, Tengbo Yu, Haoyuan Deng, Season Si Chen, Yansong Tang, Ziwei Wang" />
-  <meta name="twitter:url" content="https://anybimanual.github.io/" />
-  <meta name="twitter:image" content="https://anybimanual.github.io/static/images/preview.gif" />
+  <meta name="twitter:title" content="Human-in-the-loop Online Rejection Sampling for Robotic Manipulation" />
+  <meta name="twitter:description" content="by Guanxing Lu, Rui Zhao, Haitao Lin, He Zhang, Yansong Tang" />
+  <meta name="twitter:url" content="https://hiors-project.github.io/" />
+  <meta name="twitter:image" content="https://hiors-project.github.io/static/images/preview.gif" />
   <meta name="twitter:site" content="@zipengfu" /> <!-- 如果你有新的Twitter账户，也应该更新这里 -->
   <meta name="twitter:card" content="player" />
   <meta name="twitter:player" content="https://www.youtube.com" />
@@ -108,6 +108,8 @@
 </head>
 
 
+
+
 <body>
   <section class="hero">
     <div class="hero-body">
@@ -115,25 +117,27 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title" style="display: flex; align-items: left; justify-content: center; flex-wrap: wrap; text-align: center;">
-              <img src="./static/images/font.png" alt="AnyBimanual" style="height: 4em; margin-left: 1em;">
-              <span>Transferring Unimanual Policy for General Bimanual Manipulation</span>
+              <!-- <img src="./static/images/font.png" alt="HiORS" style="height: 4em; margin-left: 1em;"> -->
+              <span>Human-in-the-loop Online Rejection Sampling for Robotic Manipulation</span>
             </h1>          
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="https://guanxinglu.github.io/">Guanxing Lu<sup>*</sup></a>&nbsp;&nbsp;
-                <a href="https://github.com/TengboYu01">Tengbo Yu<sup>*</sup></a>&nbsp;&nbsp;
-                <a href="https://github.com/Denghaoyuan123?tab=repositories">Haoyuan Deng</a>&nbsp;&nbsp;
-                <a href="https://www.sigs.tsinghua.edu.cn/Chensi_en/main.htm">Season Si Chen</a>&nbsp;&nbsp;
-                <a href="https://andytang15.github.io/">Yansong Tang<sup>†</sup></a>&nbsp;&nbsp;
-                <a href="https://ziweiwangthu.github.io/">Ziwei Wang</a>
+                <a href="https://guanxinglu.github.io/">Guanxing Lu<sup>1,2,*</sup></a>&nbsp;&nbsp;
+                <a href="#">Rui Zhao<sup>2,*</sup></a>&nbsp;&nbsp;
+                <a href="#">Haitao Lin<sup>2</sup></a>&nbsp;&nbsp;
+                <a href="#">He Zhang<sup>2</sup></a>&nbsp;&nbsp;
+                <a href="https://andytang15.github.io/">Yansong Tang<sup>1,†</sup></a>
               </span>
             </div>
-            <div class="column">
+            <div class="is-size-6 publication-authors" style="margin-top: 0.5em;">
+              <span><sup>*</sup>Equal contribution&nbsp;&nbsp;&nbsp;<sup>†</sup>Corresponding author</span>
+            </div>
+            <div class="is-size-6 publication-authors" style="margin-top: 0.5em;">
+              <span><sup>1</sup>Tsinghua Shenzhen International Graduate School&nbsp;&nbsp;&nbsp;<sup>2</sup>Tencent Robotics X</span>
+            </div>
+            <!-- <div class="column">
                 <image src="./static/images/logo1.png" style="width: 40%;"></image>
-            </div>
-            <div class="is-size-4 publication-authors">
-              ICCV 2025
-            </div>
+            </div> -->
             <!-- <div class="is-size-4 publication-authors">
               <b style="color:rgb(255, 100, 100);">Best Systems Paper Award Finalist (top 3)</b>
             </div> -->
@@ -141,7 +145,7 @@
               <div class="publication-links">
                 <!-- PDF Link. -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/pdf/2412.06779"
+                  <a href="#"
                     class="external-link button is-normal is-rounded is-dark" target="_blank">
                     <span class="icon">
                         <i class="fas fa-file-pdf"></i>
@@ -151,7 +155,7 @@
                 </span>
                 <!-- arXiv Link. -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2412.06779"
+                  <a href="#"
                     class="external-link button is-normal is-rounded is-dark" target="_blank">
                     <span class="icon">
                         <i class="ai ai-arxiv"></i>
@@ -171,7 +175,7 @@
                 </span> -->
                 <!-- Video Link. -->
                 <span class="link-block">
-                  <a href="https://www.youtube.com/watch?v=RFwLgtzrXuM"
+                  <a href="#"
                     class="external-link button is-normal is-rounded is-dark" target="_blank">
                     <span class="icon">
                         <i class="fab fa-youtube"></i>
@@ -209,7 +213,7 @@
                 </span>
                 <!-- Code Link. -->
                 <span class="link-block">
-                  <a href="https://github.com/TengBoYu01/AnyBimanual" class="external-link button is-normal is-rounded is-dark" target="_blank">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark" target="_blank">
                     <span class="icon">
                         <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github"></i> Font Awesome fontawesome.com -->
                     </span>
@@ -230,7 +234,7 @@
       <div class="column is-full-width is-centered has-text-centered">
         <!-- <h2 class="title is-2" style="text-align: center;" id="method-video" >Real-World Robot Parkour Demos</h2> -->
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/RFwLgtzrXuM" title="AnyBimanual"            
+          <iframe src="https://www.youtube.com/embed/3UaDdfLYddE" title="Hi-ORS"            
         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
@@ -239,330 +243,15 @@
 </section>
 
 
-<section class="section">
-  <div class="container">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-two-thirds">
-        <h2 class="title is-2">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Performing general language-conditioned bimanual manipulation tasks is of great importance for many applications ranging from household service to industrial assembly. However, collecting bimanual manipulation data is expensive due to the high-dimensional action space, which poses challenges for conventional methods to handle general bimanual manipulation tasks. In contrast, unimanual policy has recently demonstrated impressive generalizability across a wide range of tasks because of scaled model parameters and training data, which can provide sharable manipulation knowledge for bimanual systems. To this end, we propose a plug-and-play method named AnyBimanual, which transfers pretrained unimanual policy to general bimanual manipulation policy with few bimanual demonstrations. Specifically, we first introduce a skill manager to dynamically schedule the skill representations discovered from pretrained unimanual policy for bimanual manipulation tasks, which linearly combines skill primitives with task-oriented compensation to represent the bimanual manipulation instruction. To mitigate the observation discrepancy between unimanual and bimanual systems, we present a visual aligner to generate soft masks for visual embedding of the workspace, which aims to align visual input of unimanual policy model for each arm with those during pretraining stage. AnyBimanual shows superiority on 12 simulated tasks from RLBench2 with a sizable 12.67% improvement in success rate over previous methods. Experiments on 9 real-world tasks further verify its practicality with an average success rate of 84.62%.          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h2 class="title is-2" style="text-align: center;">Method</h2>
-    <h2 class="title is-4" style="text-align: center;">Overall Pipeline</h2>
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-two-thirds">
-        <div class="content has-text-justified">
-          <p>
-            The overall pipeline of AnyBimanual, which primarily consists of a skill manager and a perception manager. The skill manager adaptively coordinates primitive skills for each robot arm, while the perception manager mitigates the distributional shift from unimanual to bimanual by decomposing the visual observation for each arm.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!-- Image row 1: Full width image -->
-    <div class="columns is-centered">
-      <div class="column is-four-fifths is-centered has-text-centered">
-        <img src="./resources/method/pipeline.png" alt="Full Width Image" style="width: 95%;" />
-      </div>
-    </div>
-    <!-- Image row 2: Two images side by side -->
-    <!-- <div class="columns is-centered">
-      <div class="column is-three-fifths">
-        <img src="./resources/method/skill clustering.png" alt="First Half Width Image" style="width: 120%;" />
-      </div>
-      <div class="column is-two-fifths">
-        <img src="./resources/method/Vsiualization.png" alt="Second Half Width Image" style="width: 80%;" />
-      </div>
-    </div>
-    <h2 class="title is-4" style="text-align: center;">Stage 2: RL Fine-tuning with Hard Dynamics Constraints</h2>
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-two-thirds">
-        <div class="content has-text-justified">
-          <p>
-            In the RL fine-tuning stage, we enforce all dynamics constraints and fine-tune the behaviors learned in the pre-training stage with realistic dynamics.
-          </p>
-        </div>
-      </div>
-    </div>
-    <h2 class="title is-4" style="text-align: center;">Stage 3: Learning a Vision-Based Parkour Policy via Distillation</h2>
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-two-thirds">
-        <div class="content has-text-justified">
-          <p>
-            Skill Clustering. We cluster the skill embeddings to further interpret the discovered primitive skills of our AnyBimanual.
-          </p>
-        </div>
-      </div>
-    </div> -->
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h2 class="title is-2" style="text-align: center;">Simulation Tasks</h2>
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-two-thirds">
-        <div class="content has-text-justified">
-          <p>
-            The simulated experiments are conducted in <a href="https://github.com/markusgrotz/peract_bimanual">RLBench2</a>. We transfer a well-recognized unimanual policy PerAct to bimanual policy with AnyBimanual, and find that it can complete 12 challenging bimanual tasks simultaneously.  
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="scroll-container">
-      <!-- Row 1 -->
-      <div class="columns is-multiline is-mobile">
-        <div class="column is-narrow has-text-centered">
-          <video controls autoplay loop muted playsinline style="width: 320px; height: 240px; margin: 10px;">
-            <source src="./resources/sim_demos/laptop.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p>(a) pick laptop</p>
-        </div>
-        <div class="column is-narrow has-text-centered">
-          <video controls autoplay loop muted playsinline style="width: 320px; height: 240px; margin: 10px;">
-            <source src="./resources/sim_demos/plate.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p>(b) pick plate</p>
-        </div>
-        <div class="column is-narrow has-text-centered">
-          <video controls autoplay loop muted playsinline style="width: 320px; height: 240px; margin: 10px;">
-            <source src="./resources/sim_demos/sweep.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p>(c) sweep to dustpan</p>
-        </div>
-        <div class="column is-narrow has-text-centered">
-          <video controls autoplay loop muted playsinline style="width: 320px; height: 240px; margin: 10px;">
-            <source src="./resources/sim_demos/ball.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p>(d) lift ball</p>
-        </div>
-        <div class="column is-narrow has-text-centered">
-          <video controls autoplay loop muted playsinline style="width: 320px; height: 240px; margin: 10px;">
-            <source src="./resources/sim_demos/box.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p>(e) push box</p>
-        </div>
-        <div class="column is-narrow has-text-centered">
-          <video controls autoplay loop muted playsinline style="width: 320px; height: 240px; margin: 10px;">
-            <source src="./resources/sim_demos/tray.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p>(f) lift tray</p>
-        </div>
-      </div>
-      <!-- Row 2 -->
-      <div class="columns is-multiline is-mobile">
-        <div class="column is-narrow has-text-centered">
-          <video controls autoplay loop muted playsinline style="width: 320px; height: 240px; margin: 10px;">
-            <source src="./resources/sim_demos/oven.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p>(g) take out tray</p>
-        </div>
-        <div class="column is-narrow has-text-centered">
-          <video controls autoplay loop muted playsinline style="width: 320px; height: 240px; margin: 10px;">
-            <source src="./resources/sim_demos/button.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p>(h) press buttons</p>
-        </div>
-        <div class="column is-narrow has-text-centered">
-          <video controls autoplay loop muted playsinline style="width: 320px; height: 240px; margin: 10px;">
-            <source src="./resources/sim_demos/easy.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p>(i) handover item easy</p>
-        </div>
-        <div class="column is-narrow has-text-centered">
-          <video controls autoplay loop muted playsinline style="width: 320px; height: 240px; margin: 10px;">
-            <source src="./resources/sim_demos/handover.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p>(j) handover item</p>
-        </div>
-        <div class="column is-narrow has-text-centered">
-          <video controls autoplay loop muted playsinline style="width: 320px; height: 240px; margin: 10px;">
-            <source src="./resources/sim_demos/rope.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p>(k) straighten rope</p>
-        </div>
-        <div class="column is-narrow has-text-centered">
-          <video controls autoplay loop muted playsinline style="width: 320px; height: 240px; margin: 10px;">
-            <source src="./resources/sim_demos/fridge.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p>(l) put bottle in fridge</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h2 class="title is-2" style="text-align: center;">Real-world Tasks</h2>
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-two-thirds">
-        <div class="content has-text-justified">
-        <p>
-          The real-world experiments are performed in a tabletop setup with objects randomized in location every episode. AnyBimanual can simultaneously conduct 9 complex
-          real-world bimanual manipulation tasks with one model.
-        </p>
-        </div>
-      </div>
-    </div>
-    <!-- Row 1 -->
-    <div class="columns is-centered">
-      <div class="column is-one-third has-text-centered">
-        <h3 class="video-title">Typewriting</h3>
-        <video controls autoplay loop muted playsinline src="./resources/real_demo/robot.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
-      </div>
-      <div class="column is-one-third has-text-centered">
-        <h3 class="video-title">Fold Clothes</h3>
-        <video controls autoplay loop muted playsinline src="./resources/real_demo/clothes.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
-      </div>
-      <div class="column is-one-third has-text-centered">
-        <h3 class="video-title">Handover Bowl</h3>
-        <video controls autoplay loop muted playsinline src="./resources/real_demo/handover.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
-      </div>
-    </div>
-    <!-- Row 2 -->
-    <div class="columns is-centered">
-      <div class="column is-one-third has-text-centered">
-        <h3 class="video-title">Lift Cabinet</h3>
-        <video controls autoplay loop muted playsinline src="./resources/real_demo/lift.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
-      </div>
-      <div class="column is-one-third has-text-centered">
-        <h3 class="video-title">Pick&Place Async</h3>
-        <video controls autoplay loop muted playsinline src="./resources/real_demo/pick_in_one.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
-      </div>
-      <div class="column is-one-third has-text-centered">
-        <h3 class="video-title">Pick&Place Sync</h3>
-        <video controls autoplay loop muted playsinline src="./resources/real_demo/pick_in_two.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
-      </div>
-    </div>
-    <!-- Row 3 -->
-    <div class="columns is-centered">
-      <div class="column is-one-third has-text-centered">
-        <h3 class="video-title">Play PingPang</h3>
-        <video controls autoplay loop muted playsinline src="./resources/real_demo/pingpang.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
-      </div>
-      <div class="column is-one-third has-text-centered">
-        <h3 class="video-title">Wash Dishes</h3>
-        <video controls autoplay loop muted playsinline src="./resources/real_demo/press.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
-      </div>
-      <div class="column is-one-third has-text-centered">
-        <h3 class="video-title">Rotate Toothbrush</h3>
-        <video controls autoplay loop muted playsinline src="./resources/real_demo/brushtooth.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container">
-    <h2 class="title is-2" style="text-align: center;">Unseen Data Generalization</h2>
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-two-thirds">
-        <div class="content has-text-justified">
-          <p>
-            We include multiple distractors in real-world experiments, and find AnyBimanual generalizes to
-            these settings successfully by unlocking the commonsense held by unimanual base models.          </p>
-        </div>
-      </div>
-    </div>
-    <!-- Row 1: Two Images -->
-    <div class="columns is-centered">
-      <div class="column is-one-fourth has-text-centered">
-        <video controls autoplay loop muted playsinline src="./resources/Generalization/unseen_color.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
-        <h3 class="video-title">Unseen Color</h3>
-      </div>
-      <div class="column is-one-fourth has-text-centered">
-        <video controls autoplay loop muted playsinline src="./resources/Generalization/unseen_background.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
-        <h3 class="video-title">Unseen Background</h3>
-      </div>
-      <div class="column is-one-fourth has-text-centered">
-        <video controls autoplay loop muted playsinline src="./resources/Generalization/unseen_shape_color.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
-        <h3 class="video-title">Unseen Shape & Color</h3>
-      </div>
-      <div class="column is-one-fourth has-text-centered">
-        <video controls autoplay loop muted playsinline src="./resources/Generalization/unseen_size.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
-        <h3 class="video-title">Unseen Size</h3>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container">
-    <h2 class="title is-2" style="text-align: center;">Failure Cases</h2>
-    <div class="columns is-centered">
-      <div class="column is-full-width is-centered has-text-centered">
-        <video controls autoplay loop muted playsinline src="./resources/failure_case/pickintwo.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
-        <div class="content is-two-third has-text-centered">
-          <p>
-            The robot struggles to generalize to different backgrounds and object sizes, which leads to an out-of-distribution movement.
-          </p>
-        </div>
-      </div>
-      <div class="column is-full-width is-centered has-text-centered">
-        <video controls autoplay loop muted playsinline src="./resources/failure_case/pick in one error.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
-        <div class="content is-two-third has-text-centered">
-        <p>
-          The robot fails to grasp the green block due to a small deviation, which may be caused by inconsistent data collection.        </p>
-        </div>
-      </div>
-      <div class="column is-full-width is-centered has-text-centered">
-        <video controls autoplay loop muted playsinline src="./resources/failure_case/tooth.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
-        <div class="content is-two-third has-text-centered">
-        <p>
-          The low-level motion planner cannot handle the severe rotation predicted by the agent, which can result in a dangerous cup fall.        </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-two-thirds">
-        <h2 class="title is-2">Acknowledgement</h2>
-        <div class="content has-text-justified">
-          <p>
-            The author team would like to acknowledge <a href="https://github.com/CyanChew">Yuheng Zhou</a>, Wenkai Guo, Jiarui Xu, Qianzhun Wang, Yongxuan Zhang, Zilai Wei, Haolei Bai from Nanyang Technological University for participating in the expert data collection and Xinyue Zhao from Nanyang Technological University for art design support.
-                  </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 <section class="section" id="BibTeX">
   <div class="container content">
     <h2 class="titile">BibTeX</h2>
-    <pre><code>@article{lu2024anybimanual,
-  title={AnyBimanual: Transferring Unimanual Policy for General Bimanual Manipulation},
-  author={Lu, Guanxing and Yu, Tengbo and Deng, Haoyuan and Chen, Season Si and Tang, Yansong and Wang, Ziwei},
-  journal={arXiv preprint arXiv:2412.06779},
-  year={2024}
+    <pre><code>@article{lu2025hiors,
+  title={Human-in-the-loop Online Rejection Sampling for Robotic Manipulation},
+  author={Lu, Guanxing and Zhao, Rui and Lin, Haitao and Zhang, He and Tang, Yansong},
+  journal={arXiv preprint},
+  year={2025}
 }</code></pre>
   </div>
 </section>
